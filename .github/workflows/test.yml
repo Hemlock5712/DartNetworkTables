@@ -29,6 +29,9 @@ jobs:
       # - name: Verify formatting
       #   run: dart format --output=none --set-exit-if-changed .
 
+      - name: Build wpilib
+        run: cd allwpilib && ./gradlew :ntcoreffi:build && cd ..
+
       # Consider passing '--fatal-infos' for slightly stricter analysis.
       - name: Analyze project source
         run: dart analyze

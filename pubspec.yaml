@@ -26,4 +26,5 @@ ffigen:
     // ignore_for_file: camel_case_types, non_constant_identifier_names, constant_identifier_names
   exclude-all-by-default: false
 dependencies:
+  dylib: ^0.3.2+1
   ffi: ^2.0.1
