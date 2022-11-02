@@ -1,0 +1,29 @@
+name: nt
+description: Networktables wrapper for use with dart.
+version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
+  ffigen: ^7.2.0
+
+ffigen:
+  output: "lib/gen/ntcore.dart"
+  name: "ntcore"
+  description: "Bindings for wpilib ntcore"
+  headers:
+    entry-points:
+      - "allwpilib/ntcore/src/main/native/**.h"
+  structs:
+    dependency-only: opaque
+  unions:
+    dependency-only: opaque
+  preamble: |
+    // ignore_for_file: camel_case_types, non_constant_identifier_names, constant_identifier_names
+  exclude-all-by-default: false
+dependencies:
+  ffi: ^2.0.1
