@@ -5,13 +5,7 @@ import 'dart:io';
 
 import 'package:nt/gen/ntcore.dart';
 
-Glob ntcoreGlob = Glob("allwpilib/ntcoreffi/build/**/release");
-
-String NTCORE_PATH = Directory.current
-    .listSync()
-    .where((f) => ntcoreGlob.matches(f.path))
-    .elementAt(0)
-    .path;
+String NTCORE_PATH = "./libs";
 
 // const NTCORE_PATH =
 //     "allwpilib/ntcoreffi/build/libs/ntcoreffi/shared/osxx86-64/release";

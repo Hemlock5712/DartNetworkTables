@@ -1,1 +1,5 @@
 allwpilib
+!libs/*.o
+!libs/*.dylib
+!libs/*.dll
+libs/.gitkeep
